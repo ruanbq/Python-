@@ -1,0 +1,47 @@
+
+def calcular():
+    operacoes = input ('''Escola uma operação :
+ + for adição
+ - for subtração
+ * for miltiplicação
+ / for divisão
+ ''')
+
+    number_1 = int(input("Primeiro digito = "))
+    number_2 = int (input("Segundo digito = "))
+
+    if operacoes == '+':
+         print ('{} + {} ='.format(number_1, number_2)) 
+         print (number_1+number_2) 
+
+    elif operacoes == '-':
+        print ('{} - {} = '.format(number_1, number_2))
+        print (number_1-number_2)
+
+    elif operacoes == '*':
+         print ('{} * {} = '.format(number_1, number_2))
+         print (number_1*number_2)
+
+    elif operacoes == '/':
+        print ('{} / {} = '.format(number_1, number_2))
+        print (number_1/number_2)
+
+    else:
+         print ("Operação invalida")
+
+    denovo()
+
+def denovo():
+    calc_again = input('''
+Voce quer calcular de novo ?.
+por favor coloque S para sim e N para não
+''')
+
+    if calc_again.upper() == 'S':
+        calcular()
+    elif calc_again.upper() == 'S':
+        print('Até logo.')
+    else:
+        denovo()
+
+calcular()
